@@ -1,6 +1,31 @@
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
+public boolean isTheSame(String[] arr1, String[] arr2)
+{
+  int ar1 = arr1.length;
+  int ar2 = arr2.length;
+  if (ar1!=ar2)
+  {
+    return false;
+  }
+  String[] a1= new String[ar1];
+  String[] a2= new String[ar2];
+  for (int y=0; y<ar1; y++)
+  {
+    a1[y]=arr1[y];
+  }
+  for (int z=0; z<ar2; z++)
+  {
+    a2[z]=arr2[z];
+  }
+  Boolean[] compare = new Boolean[ar1];
+  for (int x=0; x< ar1; x++)
+  {
+    if (a1[x]==a2[x])
+    {
+    compare[x]= true;
+    }
+    else{
+    return false;
+    }
+  }
+  return true;
+}
